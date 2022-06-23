@@ -1,30 +1,32 @@
 *{
     box-sizing: border-box;
 }
-body
+.body
 {
     margin: 0;
 }
-img
+.img
 {
     display: block;
     width: 100%;
 }
 .main-title
+
 {
+    
     text-align: center;
     font-size: 20.5 em;
     margin: 10px 0;
 }/*Estilos del menu*/
-.mostrar
+.contaner-flex
 {
-    visibility: visible;
+    overflow: hidden;
 }
 .menu
 {
+    display: none;
     position: absolute;
     top:125px;
-    left: 0;
     background-color: #212121;
     width: 100%;
     list-style: none;
@@ -32,31 +34,56 @@ img
     margin: 0;
     z-index: 999999;
     transition: all 0.5s;
-    visibility: hidden;
-    transition: all 0.5s;
+    left: 100%;
+ 
+    
+}
+.mostrar_menu
+{
+    display: block;
+    left: 0;
+    transition: all 1s;
+   
 }
 .menu-item
 {
-    color: white;
     padding: 20px;
     text-align: center;
     width: 150px;
     margin:auto;
+    width: 100%;
 }
-/*End menu style */
-.main-header-container
+.menu-item:hover
 {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    background-color: black;
+}
+.menu-link
+{
+    color: white;
+    text-decoration: none;
 }
 .icon-menu
 {
   font: 1.5em;
   border: 1px solid black;
   display: block;
-  padding: 10px 15px;  
+  padding: 10px 15px; 
+  margin-left: 110px; 
 }
+/*End menu style */
+.main-header-container-a
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.main-header-container
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
 .carousel-inner::before
 {
     content: "";
@@ -314,6 +341,80 @@ img
 /*Incia Web*/
 @media screen and (min-width:1024px)
 {
+    .contaner-flex
+    {
+        display: flex;
+    }
+    .icon-menu
+    {
+        display: none;
+    }
+    .menu
+    {
+        display: flex;
+        left: 0;
+        position: static;
+        background-color: white;
+        padding-top:10px ;
+    }
+    .menu-link
+    {
+        color: #151515;
+        text-decoration: none;
+    }
+    .main-header .contaner-flex
+    {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .main-title
+    {
+     
+        width: 100%;
+        font-size: 4em;
+        padding-bottom: 2rem;
+        border-bottom: #151515 solid 1px;
+    }
 
+    .main-header-container-a{
+    flex-wrap:wrap ;
+    text-align: center;
+    padding-left: 15rem;
+    padding-right: 10rem;
+    }
+    .main-header-btn
+    {
+        margin: 0rem 300px 0px 0px;
+        padding-left: 10px;
+
+        
+    }
+    .main-header-container
+    {
+        position: absolute;
+        margin-top: 4rem;
+        margin-left:0;
+        margin-right:0;
+        width: 100%;
+    }
+    .main-header-imput{
+        width: 15rem;
+        margin-left: 20rem;
+        margin-right:-6rem ;
+      
+    }
+    .menu-item:hover
+    {
+        background-color: whitesmoke;
+        color: #151515;
+    }
+    /* Inicia footer*/
+    .main-footer
+    {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+    }
+    /*Finaliza footer*/
 }
 /*ncia Web*/
